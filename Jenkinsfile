@@ -6,5 +6,10 @@ pipeline{
                 git branch: 'main', credentialsId: 'cred-github', url: 'https://github.com/KVLevinsky/DOD'
             }
         }
+        stage("List the files") {
+            steps{
+                sh 'ls -lah'
+            }
+        }
     }
 }
