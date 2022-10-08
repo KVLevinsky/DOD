@@ -11,5 +11,10 @@ pipeline{
                 sh 'ls -lah'
             }
         }
+        stage("Build solution") {
+            steps{
+                sh 'dotnet build .'
+            }
+        }
     }
 }
