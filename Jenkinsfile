@@ -26,7 +26,7 @@ pipeline{
                 sh 'dotnet publish .'
             }
         }
-        stage("List the files") {
+        stage("List the files after publishing") {
             steps{
                 sh 'ls -lahR'
             }
