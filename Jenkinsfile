@@ -8,7 +8,7 @@ pipeline{
         }
         stage("List the files") {
             steps{
-                sh 'ls -lah'
+                sh 'ls -lahR'
             }
         }
         stage("Build solution") {
@@ -24,6 +24,11 @@ pipeline{
         stage("Publish solution") {
             steps{
                 sh 'dotnet publish .'
+            }
+        }
+        stage("List the files") {
+            steps{
+                sh 'ls -lahR'
             }
         }
     }
