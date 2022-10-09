@@ -21,5 +21,10 @@ pipeline{
                 sh 'dotnet test .'
             }
         }
+        stage("Publish solution") {
+            steps{
+                sh 'dotnet publish .'
+            }
+        }
     }
 }
