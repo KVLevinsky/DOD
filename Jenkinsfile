@@ -35,7 +35,7 @@ pipeline{
             steps{
                 sh 'echo ========================================'
                 sh 'ls -lah ./WebAppAPI'
-                sh 'docker build -t kvlevinsky/sample-webappapi:latest ./WebAppAPI/Dockerfile'
+                sh 'docker build -t kvlevinsky/sample-webappapi:latest ./WebAppAPI/'
             }
         }
     }
