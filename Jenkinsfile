@@ -23,7 +23,7 @@ pipeline{
         }
         stage("Publish solution") {
             steps{
-                sh 'dotnet publish .'
+                sh 'dotnet publish -c Release .'
             }
         }
         stage("List the files after publishing") {
