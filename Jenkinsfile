@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent worker
     stages{
         stage("Checkout from Git") {
             steps{
