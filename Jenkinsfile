@@ -33,7 +33,9 @@ pipeline{
         }
         stage("Build Docker image") {
             steps{
+                sh 'echo ========================================'
                 sh 'cd WebAppAPI'
+                sh 'ls -lah'
                 sh 'docker build -t kvlevinsky/sample-webappapi:latest .'
             }
         }
