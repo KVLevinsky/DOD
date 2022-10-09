@@ -8,7 +8,7 @@ pipeline{
         }
         stage("List the files") {
             steps{
-                sh 'ls -lahR'
+                sh 'ls -lah'
             }
         }
         stage("Build solution") {
@@ -28,15 +28,14 @@ pipeline{
         }
         stage("List the files after publishing") {
             steps{
-                sh 'ls -lahR'
+                sh 'ls -lah'
             }
         }
         stage("Build Docker image") {
             steps{
                 sh 'echo ========================================'
-                sh 'cd ./WebAppAPI'
-                sh 'ls -lah'
-                sh 'docker build -t kvlevinsky/sample-webappapi:latest .'
+                sh 'ls -lah ./WebAppAPI'
+                sh 'docker build -t kvlevinsky/sample-webappapi:latest ./WebAppAPI/Dockerfile'
             }
         }
     }
